@@ -1,0 +1,195 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    position: relative;
+    font-family: 'Abel';
+    background-color: rgb(234, 234, 238);
+}
+.col-sm-8{
+    padding: 10vh 10vw 10vh 10vw;
+    size: 100vw;
+    background-color: #ffffff;
+}
+
+
+.toppanel{
+    position: relative;
+    width: auto;
+    height: 70vh;
+}
+
+.toppanel .background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+    z-index: 0;
+}
+#footericon{
+    width: 5%;
+    height: 5%;
+}
+button{
+    margin: 1vh;
+}
+video {
+    width: 25vh;
+    height: auto;
+}
+img{
+    height: 25vh;
+    width: auto;
+
+}
+.col-sm-8 img {
+    margin: 1vh 0 1vh 0;
+}
+/*titelcard galerie*/
+.card{
+    margin: 3vh;
+    text-align: center;
+}
+.card h1{
+    font-weight: bold;
+}
+.card form {
+    margin-right: 20vw;
+    margin-left: 20vw;
+}
+.card button{
+    margin-left: 45vw;
+}
+.card input{
+
+}
+/*galerie*/
+.gallery{
+    text-align: center;
+}
+
+.gallery img {
+    margin: 1vh;
+    animation: 1s ease-out 0s 1 slideInLeft;
+}
+.gallery img:hover{
+
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.58), 0 7px 21px 0 rgba(0, 0, 0, 0.66);
+    text-align: center;
+}
+/* navbar */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.sticky + .content {
+    padding-top: 102px;
+}
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #1e1f28;
+    box-shadow: inset 0 0 5px #1e1f28;
+}
+::-webkit-scrollbar-thumb {
+    background: #e0e0e0;
+    box-shadow: inset 0 0 5px #1c1c1f;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #afafaf;
+    box-shadow: inset 0 0 5px #000000;
+}
+/* animation */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+body {
+    margin: 0;
+    animation: 1s ease-out 0s 1 slideInLeft;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+    animation: 1s ease-out 0s 1 slideInLeft;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 75%;
+//max-width: 75%;
+}
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(1)}
+    to {-webkit-transform:scale(2)}
+}
+@keyframes zoom {
+    from {transform:scale(0.4)}
+    to {transform:scale(1)}
+}
+@-webkit-keyframes zoom-out {
+    from {transform:scale(1)}
+    to {transform:scale(0)}
+}
+@keyframes zoom-out {
+    from {transform:scale(1)}
+    to {transform:scale(0)}
+}
+/* Add Animation */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+.out {
+    animation-name: zoom-out;
+    animation-duration: 0.6s;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
