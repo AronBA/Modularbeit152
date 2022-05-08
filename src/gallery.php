@@ -17,25 +17,25 @@
     <div class="container-fluid">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link active" href="index.php">Home</a>
+                <a class="nav-link active" href="../index.php">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.php#punkt1">Journal</a>
+                <a class="nav-link" href="../index.php#punkt1">Journal</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.php#punkt2">GD Library</a>
+                <a class="nav-link" href="../index.php#punkt2">GD Library</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.php#punkt3">Animated GIF</a>
+                <a class="nav-link" href="../index.php#punkt3">Animated GIF</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.php#punkt4">Skalieren</a>
+                <a class="nav-link" href="../index.php#punkt4">Skalieren</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="gallery.php">Galerie</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.php#punkt6">Video</a>
+                <a class="nav-link" href="../index.php#punkt6">Video</a>
             </li>
         </ul>
     </div>
