@@ -15,7 +15,8 @@ function imagecopymerge_alpha($dst_im, $src_im, $dst_x, $dst_y, $src_x, $src_y, 
 }
 
 function mark($img){
-    // Melde alle PHP Fehler (siehe Changelog)
+
+// Melde alle PHP Fehler (siehe Changelog)
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
@@ -25,35 +26,30 @@ function mark($img){
     $im = imagecreatefromjpeg($img);
     $im2 = imagecreatefrompng('../static/img/logo.png');
 
-// Hier wäre ein leeres Bild
-//$im = imagecreatetruecolor(240, 80);
-    $text_color = imagecolorallocate($im, 233, 14, 91);
+
     $white = imagecolorallocate($im, 255, 255, 255);
-    $grey = imagecolorallocate($im, 100, 100, 100);
-    $black = imagecolorallocate($im, 0, 0, 0);
     $font = '../static/fonts/arial.ttf';
 // Text in Bild einfügen
 
     $sx2 = (imagesx($im2) / 2);
-
     $sx = (imagesx($im) / 2) - $sx2;
     $sy = (imagesy($im) / 2) ;
 
-    imagettftext($im, 100, 0, 2500, 1900, $white, $font, 'Aron Baur');
-    imagettftext($im, 100, 0, 2500, 1700, $white, $font, 'I2a');
+
+    imagettftext($im, $sx  / 7, 0, imagesx($im) - (imagesx($im)/100 * 13), (imagesy($im))-((imagesy($im))/100 * 12), $white, $font, 'Aron');
+    imagettftext($im, $sx / 7, 0, imagesx($im) - (imagesx($im)/100 * 13), (imagesy($im))-((imagesy($im))/100 * 5), $white, $font, 'I2a');
 
     imagecopymerge_alpha($im, $im2, $sx, $sy, 0, 0, imagesx($im2), imagesy($im2), 99);
-
-
-
-
 
     header('Content-Type: image/jpeg');
 
 
+    Imagejpeg($im, '../Thumbnails/test.jpg', 100);
+    unlink($img);
     imagedestroy($im);
     imagedestroy($im2);
-    return $im;
+    resize();
+    redirect("../index.php");
 }
 
 
@@ -63,8 +59,15 @@ function resize(){
     $images = glob($dirc . "*.jpg");
 // 500px breite
     foreach ($images as $image) {
+
+
         $im_php = imagecreatefromjpeg($image);
         $im_php = imagescale($im_php, 500);
+
+        $white = imagecolorallocate($im_php, 255, 255, 255);
+        $font = '../static/fonts/arial.ttf';
+        imagettftext($im_php, 12, 0, 20,20, $white, $font, pathinfo($image)["filename"]."jpg");
+
         $new_height = imagesy($im_php);
         $new_name = str_replace('-1920x1080', '-500x' . $new_height, basename($image));
         imagejpeg($im_php, $dirc . 'resize500/' . $new_name);
@@ -88,7 +91,7 @@ function redirect($url, $permanent = false) {
 
 if(isset($_POST["scalesubmit"])) {
     resize();
-    redirect("index.html", false);
+    redirect("../index.php", false);
 }
 
 if(isset($_POST["upload"])) {
@@ -150,6 +153,14 @@ if(isset($_POST["galleryupload"])) {
     }
 }
 
+
+if (isset($_GET["delete"])){
+    $img = $_GET["delete"];
+    unlink("../Thumbnails/resize500/$img");
+    unlink("../Thumbnails/resize200/$img");
+    unlink("../Thumbnails/$img");
+    redirect("gallery.php");
+}
 
 
 
