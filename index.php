@@ -52,7 +52,16 @@
             <div class="col-sm-8">
 
             <h2 >Punkt 2: GD-Library</h2>
-            <img src="static/img/gd-library-logo.png" alt="gd-logo">
+                <?php
+                if (file_exists("temp/temp.jpg")){
+                    echo "<img src='temp/temp.jpg' alt='edited photo'>";
+                } else {
+                    echo "<img src='static/img/gd-library-logo.png'>";
+                }
+
+
+
+                ?>
                 <p>Ergänzen Sie mittels PHP und der GD-Library auf einem von Ihnen vorgegebenen Bild Ihren Vornamen und darunter Ihre Klasse. In der Mitte dieses Bildes platzieren Sie das WMS-Logo mit einer Breite von 100 Pixeln</p>
                 <form method="post" action="src/backend.php" enctype="multipart/form-data">
                     <div class="col-auto">
@@ -117,8 +126,8 @@ function mark($img){
                 <hr class="solid">
 
             <h2>Punkt 3: Animated GIF</h2>
-            <img src="static/img/zyzz.gif" >
-            <?php echo filesize("static/img/zyzz.gif") / 1048576 . " MB"; ?>
+                <img src=static/img/aron.gif>
+            <?php echo filesize("static/img/aron.gif") / 1048576 . " MB"; ?>
 
             <p>Erstellen Sie und platzieren Sie auf der Website ein eigenes, mit ihrer Hardware erstelltes, auf Sie bezogenes animated GIF, dass mindestens 10 Bilder besitzt und in einer Endlosschlaufe läuft (z.B. Stop-Motion). Es soll korrekt in HTML eingebunden sein und einen Untertitel unterhalb des Bildes besitzen, inkl. der Dateigrösse des GIFs.</p>
 
