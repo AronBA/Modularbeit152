@@ -27,6 +27,6 @@ Eine Aufgabe ist es eine kleine Animation zu machen und diese als GIF auf der WE
 ---
 ## Video
 
-obs downloaden
+Das Video zu erstellen, war meiner meinung die aufwändigste Sache an dem Projekt. Zuerst musste ich mir OBS installieren, dies ging sehr einfach. Danach musste ich aber das Video aufnehmen. EIn Problem war es 5min über den Code zu sprechen.
 
 ---

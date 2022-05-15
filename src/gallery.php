@@ -8,7 +8,7 @@ include "navbar.php";
         <p class="card-text">Erstellen Sie eine Fotogalerie mit den reduzierten Fotos (Punkt 4) aus dem Verzeichnis "Thumbnails". Wenn Sie auf ein Bild klicken, wird die grössere Version angezeigt, ohne das Bild zu vergrössern. Punkt 4 muss vorher ausgeführt sein.</p>
         <form method="post" action="backend.php" enctype="multipart/form-data">
             <div class="col-auto">
-                <label class="form-label" for="galleryupload">Hier kannst du ein eigenes Bild in die Galliere hochladen</label>
+                <label class="form-label" for="galleryupload">Hier kannst du ein eigenes Bild in die Galerie hochladen</label>
                 <input type="file" class="form-control" id="customFile" name="customFile" required/>
 
                 <button type="submit" class="btn btn-primary mb-3" name="galleryupload" id="liveToastBtn">hochladen</button>
@@ -24,7 +24,6 @@ include "navbar.php";
     $dir = new DirectoryIterator(dirname("../Thumbnails/p1.jpg"));
     foreach ($dir as $fileinfo) {
         if ($fileinfo->isFile()) {
-            $modalname = "modal" . $fileinfo;
             echo "
        
         <a href='?img=$fileinfo'><img
@@ -38,7 +37,6 @@ include "navbar.php";
 
         ?>
     </div>
-
         <?php
         if (isset($_GET["img"])){
             $img = $_GET["img"];
@@ -57,8 +55,6 @@ include "navbar.php";
                     ";
         }
         ?>
-
-
 </div>
 <script src="../static/js/scripts.js"></script>
 </body>
