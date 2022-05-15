@@ -1,3 +1,0 @@
-### Skript
-
-Einführung

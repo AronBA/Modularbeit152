@@ -60,7 +60,6 @@ function resize(){
 // 500px breite
     foreach ($images as $image) {
 
-
         $im_php = imagecreatefromjpeg($image);
         $im_php = imagescale($im_php, 500);
 
@@ -72,6 +71,7 @@ function resize(){
         $new_name = str_replace('-1920x1080', '-500x' . $new_height, basename($image));
         imagejpeg($im_php, $dirc . 'resize500/' . $new_name);
     }
+
 // 200px breite
     foreach ($images as $image) {
         $im_php = imagecreatefromjpeg($image);
@@ -80,8 +80,6 @@ function resize(){
         $new_name = str_replace('-1920x1080', '-200x' . $new_height, basename($image));
         imagejpeg($im_php, $dirc . 'resize200/' . $new_name);
     }
-
-
 }
 
 function redirect($url, $permanent = false) {

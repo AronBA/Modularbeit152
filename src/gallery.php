@@ -1,42 +1,6 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <title>Galerie</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="../static/css/styles.css" rel="stylesheet">
-</head>
-
-<body class="galeriebody">
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="myHeader">
-    <div class="container-fluid">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link active" href="../index.php">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="journal.html">Journal</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../index.php#punkt2">GD Library</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../index.php#punkt3">Animated GIF</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../index.php#punkt4">Skalieren</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="gallery.php">Galerie</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../index.php#punkt6">Video</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<?php
+include "navbar.php";
+?>
 
 <div class="card">
     <div class="card-body">
@@ -94,8 +58,6 @@
 
 
 </div>
-
-
 <script src="../static/js/scripts.js"></script>
 </body>
 </html>
