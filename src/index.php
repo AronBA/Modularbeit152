@@ -9,8 +9,8 @@ include "navbar.php"
 
             <h2 >Punkt 2: GD-Library</h2>
                 <?php
-                if (file_exists("temp/temp.jpg")){
-                    echo "<img src='temp/temp.jpg' alt='edited photo'>";
+                if (file_exists("../temp/temp.jpg")){
+                    echo "<img src='../temp/temp.jpg' alt='edited photo'>";
                 } else {
                     echo "<img src='../static/img/gd-library-logo.png'>";
                 }

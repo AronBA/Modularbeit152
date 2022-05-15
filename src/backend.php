@@ -48,7 +48,7 @@ function mark($img){
     Imagejpeg($im, '../temp/temp.jpg', 100);
     imagedestroy($im);
     imagedestroy($im2);
-    redirect("../index.php");
+    redirect("index.php");
 
 }
 
@@ -89,7 +89,7 @@ function redirect($url, $permanent = false) {
 
 if(isset($_POST["scalesubmit"])) {
     resize();
-    redirect("../index.php", false);
+    redirect("index.php", false);
 }
 
 
