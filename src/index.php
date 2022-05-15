@@ -12,7 +12,7 @@ include "navbar.php"
                 if (file_exists("../temp/temp.jpg")){
                     echo "<img src='../temp/temp.jpg' alt='edited photo'>";
                 } else {
-                    echo "<img src='../static/img/gd-library-logo.png'>";
+                    echo "<img src='../static/img/gd-library-logo.png' alt='gd-library logo'>";
                 }
                 ?>
                 <p>Ergänzen Sie mittels PHP und der GD-Library auf einem von Ihnen vorgegebenen Bild Ihren Vornamen und darunter Ihre Klasse. In der Mitte dieses Bildes platzieren Sie das WMS-Logo mit einer Breite von 100 Pixeln</p>
@@ -79,7 +79,7 @@ function mark($img){
                 <hr class="solid">
 
             <h2>Punkt 3: Animated GIF</h2>
-                <img src=../static/img/aron.gif>
+                <img src=../static/img/aron.gif alt="aron gif">
             <?php echo filesize("../static/img/aron.gif") / 1048576 . " MB"; ?>
 
             <p>Erstellen Sie und platzieren Sie auf der Website ein eigenes, mit ihrer Hardware erstelltes, auf Sie bezogenes animated GIF, dass mindestens 10 Bilder besitzt und in einer Endlosschlaufe läuft (z.B. Stop-Motion). Es soll korrekt in HTML eingebunden sein und einen Untertitel unterhalb des Bildes besitzen, inkl. der Dateigrösse des GIFs.</p>
@@ -88,12 +88,12 @@ function mark($img){
             <hr class="solid">
 
             <h2>Punkt 4: Bilder reduzieren</h2>
-            <img src="../static/img/folder.png">
+            <img src="../static/img/folder.png" alt="folder img">
             <p>Schreiben Sie ein Skript in PHP, dass alle JPEG-Bilder in einem von ihnen vorhandenen Bilder-Verzeichnis durchsucht und dabei zwei Versionen mit max. 500 Pixeln Breite (inkl. Dateinamen im Bild) oder max. 200 Pixeln Breite im Ordner "Bilder" und "Thumbnails" erstellt.</p>
                 <form method="post" action="backend.php" enctype="multipart/form-data">
                     <div class="col-auto">
-                        <label class="form-label" for="submit">Skaliert alle Bilder nochmal (dauert eine weile)</label>
-                        <button type="submit" class="btn btn-primary mb-3" name="scalesubmit">skalieren</button>
+                        <label class="form-label" for="scalesubmit">Skaliert alle Bilder nochmal (dauert eine weile)</label>
+                        <button type="submit" class="btn btn-primary mb-3" name="scalesubmit"  id="scalesubmit">skalieren</button>
                     </div>
                 </form>
                 <pre class="prettyprint">

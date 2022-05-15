@@ -8,7 +8,9 @@ include "navbar.php";
         <p class="card-text">Erstellen Sie eine Fotogalerie mit den reduzierten Fotos (Punkt 4) aus dem Verzeichnis "Thumbnails". Wenn Sie auf ein Bild klicken, wird die grössere Version angezeigt, ohne das Bild zu vergrössern. Punkt 4 muss vorher ausgeführt sein.</p>
         <form method="post" action="backend.php" enctype="multipart/form-data">
             <div class="col-auto">
+                <label class="form-label" for="galleryupload">Hier kannst du ein eigenes Bild in die Galliere hochladen</label>
                 <input type="file" class="form-control" id="customFile" name="customFile" required/>
+
                 <button type="submit" class="btn btn-primary mb-3" name="galleryupload" id="liveToastBtn">hochladen</button>
             </div>
         </form>
